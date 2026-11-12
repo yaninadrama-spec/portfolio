@@ -12,6 +12,26 @@
   html, body { margin: 0; padding: 0; }
   body { background: #f4f3ee; }
   ::selection { background: #ecec9b; }
+  img { max-width: 100%; }
+
+  /* Tablet & mobile: one column, tighter spacing */
+  @media (max-width: 900px) {
+    body > div:first-child { padding: 24px 20px 56px !important; }
+    header { flex-wrap: wrap; row-gap: 12px; column-gap: 16px; }
+    h1 { font-size: 32px !important; line-height: 1.08 !important; }
+    main { grid-template-columns: 1fr !important; gap: 36px !important; margin-top: 26px !important; }
+    main aside { position: static !important; }
+    main p { font-size: 16px !important; max-width: none !important; }
+    section > div[style*="justify-content: space-between"] { flex-wrap: wrap; gap: 6px 16px; }
+    [style*="grid-template-columns: repeat("] { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
+  }
+
+  /* Small phones */
+  @media (max-width: 420px) {
+    body > div:first-child { padding: 20px 16px 48px !important; }
+    header a { font-size: 11px !important; letter-spacing: 0.03em !important; gap: 7px !important; }
+    h1 { font-size: 28px !important; }
+  }
 </style>
 </head>
 <body>
